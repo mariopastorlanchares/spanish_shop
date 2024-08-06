@@ -17,6 +17,8 @@ class BrandContext implements Context
         $this->createPage = $createPage;
     }
 
+
+
     /**
      * @When I want to create a new brand
      */
@@ -26,11 +28,11 @@ class BrandContext implements Context
     }
 
     /**
-     * @When I specify its name as :name
+     * @When I specify its name as :arg1
      */
-    public function iSpecifyItsNameAs(string $name)
+    public function iSpecifyItsNameAs($arg1)
     {
-        $this->createPage->nameIt($name);
+        throw new PendingException();
     }
 
     /**
@@ -38,7 +40,7 @@ class BrandContext implements Context
      */
     public function iAddIt()
     {
-        $this->createPage->add();
+        throw new PendingException();
     }
 
     /**
@@ -46,17 +48,14 @@ class BrandContext implements Context
      */
     public function iShouldBeNotifiedThatItHasBeenSuccessfullyCreated()
     {
-        // Implementa la verificación de la notificación
         throw new PendingException();
     }
 
     /**
-     * @Then the brand :name should appear in the registry
+     * @Then the brand :arg1 should appear in the registry
      */
-    public function theBrandShouldAppearInTheRegistry(string $name)
+    public function theBrandShouldAppearInTheRegistry($arg1)
     {
-        // Implementa la verificación de que la marca aparece en el registro
         throw new PendingException();
     }
-
 }

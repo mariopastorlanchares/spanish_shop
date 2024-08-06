@@ -1,0 +1,11 @@
+default:
+    suites:
+        managing_brands:
+            contexts:
+                - sylius.behat.context.hook.doctrine_orm
+                - sylius.behat.context.hook.session
+                - sylius.behat.context.setup.admin_security
+                - sylius.behat.context.transform.locale
+                - sylius.behat.context.setup.locale
+
+                - App\Behat\Context\Admin\BrandContext

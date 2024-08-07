@@ -44,3 +44,9 @@ node-watch:
 docker-compose-check:
 	@echo "You are using \"$(DOCKER_COMPOSE)\" binary"
 	@echo "Current version is \"$$($(DOCKER_COMPOSE) version)\""
+
+php-logs:
+	@ENV=$(ENV) DOCKER_USER=$(DOCKER_USER) $(DOCKER_COMPOSE) logs php
+
+symfony-logs:
+	@ENV=$(ENV) DOCKER_USER=$(DOCKER_USER) LOG_LINES=20 $(DOCKER_COMPOSE) exec php sh -c 'tail -n 20 var/log/$(ENV).log'

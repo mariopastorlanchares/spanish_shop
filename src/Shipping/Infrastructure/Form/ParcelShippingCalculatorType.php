@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Shipping\Infrastructure\Form;
 
 use Sylius\Bundle\MoneyBundle\Form\Type\MoneyType;
@@ -9,7 +11,6 @@ use Symfony\Component\Form\FormBuilderInterface;
 
 class ParcelShippingCalculatorType extends AbstractType
 {
-
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
@@ -19,5 +20,4 @@ class ParcelShippingCalculatorType extends AbstractType
             ])
         ;
     }
-
 }

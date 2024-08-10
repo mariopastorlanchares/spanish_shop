@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Shipping\Domain\DomainServices;
 
 use Sylius\Component\Shipping\Calculator\CalculatorInterface;
@@ -7,7 +9,6 @@ use Sylius\Component\Shipping\Model\ShipmentInterface;
 
 class ParcelCalculator implements CalculatorInterface
 {
-
     public function calculate(ShipmentInterface $subject, array $configuration): int
     {
         $parcelSize = $configuration['size'];

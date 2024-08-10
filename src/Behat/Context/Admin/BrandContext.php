@@ -1,23 +1,21 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Behat\Context\Admin;
 
 use App\Behat\Page\Admin\Brand\CreatePage;
 use Behat\Behat\Context\Context;
 use Behat\Behat\Tester\Exception\PendingException;
-use Symfony\Component\HttpKernel\KernelInterface;
 
 class BrandContext implements Context
 {
-
     private $createPage;
 
     public function __construct(CreatePage $createPage)
     {
         $this->createPage = $createPage;
     }
-
-
 
     /**
      * @When I want to create a new brand

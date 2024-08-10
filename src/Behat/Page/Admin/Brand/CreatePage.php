@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Behat\Page\Admin\Brand;
 
 use Sylius\Behat\Page\Admin\Crud\CreatePage as BaseCreatePage;
